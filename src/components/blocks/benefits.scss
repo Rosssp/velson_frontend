@@ -1,0 +1,94 @@
+@import url("../../assets/fonts/Manrope/manrope.css");
+
+.mainblock--bg1 {
+    background-image: url("../../assets/images/background1.png");
+    border-radius: 0px 0px 80px 80px;
+}
+
+//benefits
+
+.benefits {
+    max-height: 586px;
+    width: 100%;
+    max-width: 1440px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    scroll-snap-align: center;
+
+    &__left {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .list {
+        &__title {
+            font-family: "Manrope";
+            font-style: normal;
+            font-weight: 200;
+            font-size: 64px;
+            line-height: 110%;
+            color: #0068d7;
+            text-align: left;
+
+            & b {
+                font-weight: 700;
+            }
+        }
+
+        &__text {
+            font-family: "Manrope";
+            font-style: normal;
+            font-weight: 200;
+            font-size: 32px;
+            line-height: 150%;
+            color: #565e71;
+            text-align: left;
+
+            ul {
+                list-style: inside;
+            }
+            .inline_icon {
+                display: inline-block;
+                filter: invert(1);
+                opacity: 0.6;
+            }
+
+            &-wrapper {
+                min-height: 336px;
+            }
+        }
+
+        &__image {
+            width: 100%;
+            height: 450px;
+            max-width: 586px;
+            max-height: 586px;
+
+            margin-left: 4rem;
+
+            & .image {
+                &__bg {
+                    height: 100%;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    background-position: right;
+                }
+
+                &__icon {
+                    position: absolute;
+                    top: 20%;
+                    right: 10%;
+                    width: 59%;
+                    height: 300px;
+                }
+            }
+        }
+    }
+}

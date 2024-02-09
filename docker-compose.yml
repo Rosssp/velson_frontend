@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  nodejs:
+    image: node:latest
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    working_dir: /app
+    environment:
+      NODE_ENV: development
+    command: bash -c "npm install && npm start"

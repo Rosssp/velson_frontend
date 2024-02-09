@@ -1,0 +1,488 @@
+@import url("../../../assets/fonts/Manrope/manrope.css");
+
+.m4 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+
+	&.mobile {
+		& .benefit-list {
+			flex-direction: row;
+		}
+
+		& .m4 {
+			&__copy-container {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+
+	&__sticky {
+		width: 100%;
+		max-width: 1440px;
+		
+		@media screen and (max-width: 1580px){
+			& {
+				padding: 0 80px;
+			}
+		}
+
+
+		&-wrap {
+			position: relative;
+			height: 400vh;
+		}
+	}
+
+	&__left-wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		width: 100%;
+	}
+
+	&__container {
+		position: relative;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		height: 100vh;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+
+		&.sticky {
+			position: -webkit-sticky;
+			position: sticky;
+			z-index: 900;
+			width: 100%;
+			max-width: 1440px;
+			z-index: 50;
+		}
+	}
+
+	&__copy-wrap {
+		position: relative;
+		z-index: 600;
+		width: 40%;
+	}
+
+	&__page-dots {
+		position: static;
+		left: 30px;
+		z-index: 700;
+		top: 21%;
+
+		svg {
+			cursor: pointer;
+
+			@media screen and (max-width: 1580px) {
+				width: 24px;
+				height: 24px;
+			  }
+		}
+
+		svg.disabled {
+			opacity: 0.5;
+			cursor: default;
+			pointer-events: none;
+		}
+
+		svg.swiper-button-disabled {
+			opacity: 0.5;
+			cursor: default;
+			pointer-events: none;
+		}
+	}
+
+	//   Рабочая фигня
+
+	&__triggers {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+		width: 1px;
+		height: 100%;
+	}
+
+	// триггеры анимаций
+
+	&__trigger {
+		position: absolute;
+		z-index: 1;
+		width: 100px;
+		height: 1px;
+		background: transparent;
+
+		// &-1 {
+		//   top: 11%;
+		// }
+
+		// &-2 {
+		//   top: 42%;
+		// }
+
+		// &-3 {
+		//   top: 77%;
+		// }
+
+		&-1 {
+			top: 4.5%;
+		}
+
+		&-2 {
+			top: 29.6%;
+			height: 16px;
+		}
+
+		&-3 {
+			top: 55%;
+			height: 16px;
+		}
+
+		&-4 {
+			top: 80.65%;
+			height: 700px;
+		}
+	}
+
+	// Враппер бг круга
+
+	&__circle-wrap {
+		position: relative;
+		left: auto;
+
+		&.sticky {
+			position: -webkit-sticky;
+			position: sticky;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			display: block;
+			overflow: hidden;
+			width: 100%;
+			height: 100vh;
+		}
+	}
+
+	&__circle {
+		position: inherit;
+		transition: all 0.2s;
+		width: 586px;
+		height: 586px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+		margin-left: auto;
+		margin-right: 3%;
+
+		@media screen and (max-width: 1580px) {
+			width: 400px;
+			height: 400px;
+		  }
+
+	}
+
+	// стили текста слева
+	&__title {
+		font-family: "Manrope";
+		font-style: normal;
+		font-weight: 200;
+		font-size: 64px;
+		line-height: 110%;
+		color: #0068d7;
+		text-align: left;
+		margin-bottom: 64px;
+
+		@media screen and (max-width: 1580px) {
+			margin-bottom: 32px;
+			font-size: 48px;
+		}
+
+		@media screen and (max-width: 360px) {
+			font-size: 32px;
+		}
+
+		& b {
+			font-weight: 700;
+		}
+	}
+
+	&__text {
+		font-family: "Manrope";
+		font-style: normal;
+		font-weight: 200;
+		font-size: 32px;
+		line-height: 150%;
+		color: #565e71;
+		text-align: left;
+		min-height: 336px;
+		@media screen and (max-width: 1580px) {
+			& {
+				font-size: 24px;
+			}
+		}
+
+		ul {
+			list-style: inside;
+		}
+
+		.inline_icon {
+			display: inline-block;
+			filter: invert(1);
+			opacity: 0.6;
+
+			@media screen and (min-width: 1280px) and (max-width: 1919px) {
+				& {
+					transform: scale(75%);
+					vertical-align: middle;
+					margin-bottom: 3px;
+				}
+			}
+		}
+	}
+
+	//   Продукты(преимущества)
+	&__products-wrap {
+		position: absolute;
+		top: 0;
+		display: block;
+		width: 100%;
+		height: 400vh;
+	}
+
+	&__product-wrapper {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		width: 100%;
+		height: 100vh;
+		-webkit-box-pack: end;
+		-webkit-justify-content: flex-end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+
+	&__product-shot {
+		height: 403px;
+		transform: translateX(-148px);
+		z-index: 200;
+
+		@media screen and (max-width: 1580px) {
+			& {
+				width: 262px;
+				height: 262px;
+				transform: translateX(-106px) translateY(-37px);
+			}
+		}
+	}
+}
+
+.sticky {
+	position: sticky;
+}
+
+.main {
+	&-trigger {
+		position: absolute;
+		z-index: 999;
+		width: 100px;
+		height: 1px;
+		background: red;
+
+		&--1 {
+			bottom: 0%;
+		}
+	}
+
+	&__section {
+		width: 100%;
+		max-width: 1440px;
+	}
+}
+
+//Горизонтальный баннер
+
+.banner {
+	&__wrapper {
+		padding: 126px 80px 128px;
+		transition: all 0.2s;
+		width: 99%;
+
+		@media screen and (max-width: 1580px) {
+			padding: 92px 80px 92px;
+		}
+
+		@media screen and (max-width: 560px) {
+			padding: 64px 16px 64px;
+		}
+
+	}
+
+	&__title {
+		.m3__title {
+			text-align: center;
+			white-space: nowrap;
+			font-size: 64px;
+
+			@media screen and (max-width: 768px) {
+				font-size: 48px;
+				white-space: unset;
+			}
+
+			@media screen and (max-width: 560px) {
+				font-size: 32px;
+				margin-bottom: 32px;
+			}
+		}
+	}
+
+	&__swiper {
+		margin-bottom: 64px;
+
+		.benefit-list {
+			flex-direction: row;
+			margin-right: auto;
+
+			@media screen and (max-width: 768px) {
+				gap: 32px;
+			}
+
+			svg {
+				transform: rotate(90deg);
+				cursor: pointer;
+
+				&:last-child {
+					transform: rotate(270deg);
+				}
+
+				&.disabled {
+					opacity: 0.5;
+					cursor: default;
+				}
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+		}
+
+		& .content {
+			&__bg {
+				width: 320px;
+				height: 320px;
+				background-position: center;
+				background-size: contain;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				@media screen and (max-width: 360px) {
+					width: 242px;
+					height: 242px;
+				}
+
+				& .image__icon {
+					width: 209px;
+					height: 209px;
+
+					@media screen and (max-width: 360px) {
+						width: 158.58px;
+						height: 158.58px;
+					}
+				}
+			}
+
+			&_left {
+				@media screen and (max-width: 768px) {
+					max-height: 315px;
+					width: 100%;
+					margin-bottom: 32px;
+				}
+
+				@media screen and (max-width: 560px) {
+					max-height: 210px;
+				}
+
+				@media screen and (max-width: 360px) {
+					max-height: 205px;
+
+					& .list__text {
+						font-size: 16px;
+						margin-bottom: 32px;
+						line-height: 27px;
+
+						& .inline_icon {
+							width: 14px;
+							height: 14px;
+						}
+					}
+				}
+
+				@media screen and (max-width: 420px) {
+					max-height: 145px;
+
+					& .list__text {
+						font-size: 18px;
+						margin-bottom: 32px;
+						line-height: 150%;
+
+						& .inline_icon {
+							width: 16px;
+							height: 16px;
+						}
+					}
+				}
+			}
+
+			&_right {
+				@media screen and (max-width: 767px) {
+					margin-top: 24px;
+				}
+			}
+		}
+	}
+}

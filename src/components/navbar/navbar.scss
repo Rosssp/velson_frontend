@@ -1,0 +1,368 @@
+@import url("../../assets/fonts/Manrope/manrope.css");
+
+.app__navbar {
+    padding: 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    z-index: 99999;
+    transition: all 0.2s ease-in;
+    // background-color: rgba(255, 255, 255, 0);
+
+    &.onscroll {
+        background-color: rgba($color: #04367c, $alpha: 1);
+        background-image: url("../../assets/images/menuBg.png");
+        background-size: cover;
+        border-radius: 0px 0px 40px 40px;
+        @media (max-width: 420px) {
+            border-radius: 0px 0px 20px 20px;
+        }
+    }
+
+    &.open {
+        border-radius: 0px 0px 80px 80px;
+        @media (max-width: 600px) {
+            border-radius: 0;
+        }
+    }
+
+    &.transparent {
+        background-color: rgba($color: #04367c, $alpha: 0);
+    }
+}
+
+.navbar__wrapper {
+    width: 100%;
+    padding: 19px 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    @media (max-width: 1580px) {
+        padding: 8px 80px;
+        gap: 40px;
+    }
+    @media (max-width: 768px) {
+        padding: 8px 32px;
+    }
+
+    @media (max-width: 360px) {
+        padding: 8px 16px;
+    }
+}
+
+.app__navbar-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    width: 114px;
+    height: 24px;
+    max-width: fit-content;
+
+    img {
+        width: 90px;
+        height: 20px;
+
+        @media screen and (min-width: 2000px) {
+            width: 180px;
+            height: 40px;
+        }
+    }
+}
+.app__navbar-logo__container {
+    display: flex;
+    align-items: center;
+}
+.app__navbar-logo {
+    @media screen and (max-width: 1024px) {
+        width: 114px;
+        height: 24px;
+    }
+}
+.app__navbar-links {
+    padding: 0 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    align-items: center;
+    list-style: none;
+    @media (max-width: 1580px) {
+        justify-content: right;
+    }
+    li {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        white-space: nowrap;
+
+        a {
+            font-family: "Manrope";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            color: #ffffff;
+            text-decoration: none;
+            flex-direction: column;
+
+            // text-transform: capitalize;
+            font-weight: 700;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                opacity: 0.5;
+            }
+
+            @media screen and (max-width: 1580px) {
+                font-size: 12px;
+            }
+        }
+
+        &:hover {
+            div {
+                background: var(--secondary-color);
+            }
+        }
+    }
+
+    @media screen and (max-width: 1180px) {
+        display: none;
+    }
+}
+
+.app__navbar-line {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 2.08%,
+        #ffffff 49.72%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.app__navbar-menu {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--secondary-color);
+
+    svg {
+        width: 70%;
+        height: 70%;
+        color: var(--white-color);
+    }
+
+    div {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+        padding: 1rem;
+        width: 80%;
+        // height: 100vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        background: var(--white-color);
+        box-shadow: 0 0 20px rgba(168, 168, 168, 0.2);
+
+        svg {
+            width: 35px;
+            height: 35px;
+            color: var(--secondary-color);
+            margin: 0.5rem 1rem;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+
+            li {
+                margin: 1rem;
+
+                a {
+                    color: var(--gray-color);
+                    text-decoration: none;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    transition: all 0.2s ease-in-out;
+
+                    &:hover {
+                        color: var(--secondary-color);
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.menu {
+    &__wrapper {
+        margin-top: 96px;
+        margin-bottom: 128px;
+        width: 100%;
+        max-width: 1440px;
+        padding: 0 80px;
+
+        @media (max-width: 1024px) {
+            margin-top: 64px;
+        }
+
+        @media (max-width: 768px) {
+            margin-top: 32px;
+            padding: 0 32px;
+        }
+
+        @media (max-width: 659px) {
+            padding: 0 16px;
+            margin-bottom: 64px;
+            height: 100vh;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        gap: 146px;
+        @media screen and (max-width: 1280px) {
+            gap: 10vw;
+        }
+        @media screen and (max-width: 768px) {
+            gap: 10vw;
+        }
+        @media screen and (max-width: 656px) {
+            gap: 32px;
+            flex-direction: column;
+            height: calc(100vh - 200px);
+            overflow-y: auto;
+            &::-webkit-scrollbar-track {
+                padding: 2px 0;
+                background-color: rgba(8, 1, 41, 0.2);
+            }
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                background-color: white;
+            }
+        }
+    }
+
+    &__col {
+        max-width: 342px;
+        text-align: left;
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        color: #ffffff;
+        @media (max-width: 1280px) {
+            font-size: 12px;
+        }
+
+        li + li {
+            margin-top: 24px;
+        }
+
+        li {
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        cursor: default;
+        @media (max-width: 1280px) {
+            font-size: 12px;
+        }
+    }
+}
+
+.header__wrapper {
+    position: relative;
+    width: 50px;
+    height: 32px;
+    cursor: pointer;
+}
+.header__menu {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-0%, -0%);
+    width: 32px;
+    height: 32px;
+}
+.header__menu span {
+    top: 50%;
+    transform: translateY(0%);
+}
+.header__menu span,
+.header__menu span::before,
+.header__menu span::after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transition: all 0.2s ease-in-out;
+}
+.header__menu span::before,
+.header__menu span::after {
+    content: "";
+    left: 0;
+}
+.header__menu span::before {
+    top: 8px;
+}
+.header__menu span::after {
+    top: -8px;
+}
+.header__wrapper.is-active .header__menu > span {
+    transform: rotate(45deg);
+}
+.header__wrapper.is-active .header__menu > span:before {
+    top: 0;
+    transform: rotate(0deg);
+}
+.header__wrapper.is-active .header__menu > span:after {
+    top: 0;
+    transform: rotate(90deg);
+}

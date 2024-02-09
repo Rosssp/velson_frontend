@@ -1,0 +1,186 @@
+@import url("../../assets/fonts/Manrope/manrope.css");
+
+.how {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title {
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 200;
+        font-size: 64px;
+        line-height: 110%;
+        text-align: center;
+        color: #0068d7;
+
+        margin-bottom: 128px;
+        @media (max-width: 1580px) {
+            font-size: 48px;
+            margin-bottom: 92px;
+        }
+        @media (max-width: 560px) {
+            font-size: 32px;
+            margin-bottom: 64px;
+        }
+
+        b {
+            font-weight: 700;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            margin: 0 auto;
+            gap: 32px;
+        }
+    }
+
+    &__item {
+        min-height: 282px;
+        width: 464px;
+
+        @media screen and (max-width: 1580px) {
+            width: 302px;
+        }
+
+        @media screen and (max-width: 1280px) {
+            width: 262px;
+        }
+
+        @media screen and (max-width: 360px) {
+            width: 328px;
+        }
+
+        & + & {
+            padding-left: 24px;
+            @media (max-width: 768px) {
+                padding-left: 0;
+            }
+        }
+
+        .item {
+            &__description {
+                text-align: center;
+                font-family: "Manrope";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 150%;
+                text-align: center;
+                color: #565e71;
+
+                @media screen and (max-width: 1580px) {
+                    font-size: 16px;
+                }
+            }
+            &__image-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+                margin-bottom: 32px;
+
+                @media screen and (max-width: 1580px) {
+                    margin-bottom: 16px;
+                }
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    background: linear-gradient(
+                        90deg,
+                        rgba(86, 94, 113, 0) 0%,
+                        #565e71 51.04%,
+                        rgba(86, 94, 113, 0) 100%
+                    );
+                    margin-top: 32px;
+
+                    @media screen and (max-width: 1580px) {
+                        margin-top: 16px;
+                    }
+                }
+            }
+        }
+
+        img {
+            width: 192px;
+
+            @media screen and (max-width: 1580px) {
+                width: 122px;
+            }
+        }
+    }
+
+    &__text {
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 200;
+        font-size: 32px;
+        line-height: 150%;
+        text-align: center;
+        color: #565e71;
+        margin-bottom: 32px;
+
+        @media screen and (max-width: 1580px) {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 1128px) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__footer {
+        margin-top: 128px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+        gap: 32px;
+
+        @media (max-width: 1580px) {
+            margin-top: 92px;
+            gap: 16px;
+        }
+    }
+}
+
+.instruction {
+    &__text {
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: #565e71;
+        text-align: left;
+
+        margin-bottom: 64px;
+
+        @media screen and (min-width: 1280px) and (max-width: 1919px) {
+            & {
+                font-size: 12.8px;
+                margin-bottom: 51.2px;
+            }
+        }
+
+        ul {
+            list-style: disc;
+        }
+    }
+}
